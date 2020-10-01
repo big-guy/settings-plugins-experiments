@@ -1,0 +1,10 @@
+plugins {
+    id 'included-settings-plugin'
+}
+
+pluginManagement {
+    includeBuildAsBuildLogic("included-settings-plugin")
+}
+
+includeBuild("another-build")
+includeBuild("nested")

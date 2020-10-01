@@ -1,0 +1,22 @@
+plugins {
+    id 'included-settings-plugin'
+}
+
+pluginManagement {
+    includeBuildAsBuildLogic("included-settings-plugin")
+
+    dependencies {
+        classpath build(":included-settings-plugin")
+    }
+}
+
+includeBuild("another-build") {
+    dependencies {
+        classpath build(":included-settings-plugin")
+    }   
+}
+includeBuild("nested") {
+    dependencies {
+        classpath build(":included-settings-plugin")
+    }   
+}

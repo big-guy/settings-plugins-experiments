@@ -1,0 +1,8 @@
+plugins {
+    id 'another-included-settings-plugin'
+    id 'included-settings-plugin'
+}
+
+pluginManagement {
+    includeBuildAsBuildLogic("another-included-settings-plugin")
+}

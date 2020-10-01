@@ -1,0 +1,14 @@
+plugins {
+    id 'another-included-settings-plugin'
+    id 'included-settings-plugin'
+}
+
+pluginManagement {
+    includeBuildAsBuildLogic("another-included-settings-plugin")
+
+    // or could be dependsOn
+    dependencies {
+        classpath build(":included-settings-plugin")
+        classpath build("another-settings-plugin")
+    }
+}

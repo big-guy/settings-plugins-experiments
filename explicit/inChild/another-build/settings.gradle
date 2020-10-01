@@ -1,0 +1,12 @@
+pluginManagement {
+    includeBuildAsBuildLogic("included-settings-plugin")
+
+    // or could be dependsOn
+    dependencies {
+        classpath build(":included-settings-plugin")
+    }
+}
+
+plugins {
+    id 'included-settings-plugin'
+}
